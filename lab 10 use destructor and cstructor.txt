@@ -1,0 +1,66 @@
+#include <iostream>
+using namespace std;
+
+class land
+{
+
+public:
+	float area;
+	
+	land()
+	{
+	    
+		area = 0;
+	}
+	
+	land(int a, int b)
+	{
+		area = a * b;
+// 		cout << "Room area ="<<area <<endl ;
+	}
+	
+	land(int a, int b,int c)
+	{
+	    	area = a + b * c;
+	   // 	cout << "To paint the room you need ="<<area <<endl ;
+	
+	}
+	
+	void getArea()
+	{
+		cout<< area<< endl;
+	}
+	
+// 	// destructor
+// 	~land()
+// 	{
+// 		cout<<"Destructor called"<<endl;
+// 	}
+	
+};
+
+int main()
+{
+    int a,b,c;
+cout << "Enter length"<<endl;
+cin >> a;
+
+cout << "Enter width"<<endl;
+cin >> b;
+cout << "Enter height"<<endl;
+cin >> c;
+
+ 	land o;
+	land o1( a, b);
+	land o2( a, b,c);
+		cout << "Test";
+		
+	o.getArea();
+	cout<<endl;
+		cout << "Room area =";
+	o1.getArea();
+	cout<<endl;
+	cout << "To paint the room you need =";
+	o2.getArea();
+	return 0;
+}
